@@ -1,0 +1,25 @@
+### Create a proxy group
+POST {{baseUrl}}/group
+Content-Type: application/json
+
+{
+  "name": "proxy",
+  "mode": "DYNAMIC",
+  "type": "PROXY",
+  "restartPolicy": "NEVER",
+  "joinPower": 0,
+  "maxPlayers": 150
+}
+
+### Create a server group
+POST {{baseUrl}}/group
+Content-Type: application/json
+
+{
+  "name": "lobby",
+  "mode": "LOBBY",
+  "type": "SERVER",
+  "restartPolicy": "NEVER",
+  "joinPower": 0,
+  "maxPlayers": 50
+}

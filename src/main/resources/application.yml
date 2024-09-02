@@ -1,0 +1,24 @@
+server:
+  port: 8082
+
+spring:
+  jpa:
+    open-in-view: false
+  application:
+    name: ogcloud-control-plane
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 250MB
+      max-request-size: 250MB
+  kafka:
+    topic:
+      servers: servers
+      notify: notify
+  datasource:
+    hikari:
+      minimum-idle: 2
+      maximum-pool-size: 12
+      idle-timeout: 120000
+      connection-timeout: 300000
+      leak-detection-threshold: 300000

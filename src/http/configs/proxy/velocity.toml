@@ -1,0 +1,39 @@
+# Config version. Do not change this
+config-version = "2.7"
+bind = "0.0.0.0:25577"
+motd = "<dark_gray>≫<dark_blue><bold> OgWars </bold><dark_gray><bold>●<yellow><bold> all og modes available </bold><dark_gray><bold>║ </bold><dark_blue><bold>v1.21</bold></dark_blue><reset>\n<dark_gray>╰<bold>→<dark_blue><bold> Event </bold><dark_gray><bold>● </bold><gray><bold>ogcloud startup complete!!</bold></gray>"
+show-max-players = 150
+online-mode = true
+force-key-authentication = true
+prevent-client-proxy-connections = false
+player-info-forwarding-mode = "modern"
+forwarding-secret-file = "forwarding.secret"
+announce-forge = false
+kick-existing-players = false
+ping-passthrough = "DISABLED"
+[servers]
+lobby = "server-lobby-0.service-lobby.default.svc.cluster.local:25565"
+try = [
+    "lobby"
+]
+[forced-hosts]
+[advanced]
+compression-threshold = 256
+compression-level = -1
+login-ratelimit = 0
+connection-timeout = 5000
+read-timeout = 30000
+haproxy-protocol = false
+tcp-fast-open = false
+bungee-plugin-message-channel = true
+show-ping-requests = false
+failover-on-unexpected-server-disconnect = true
+announce-proxy-commands = true
+log-command-executions = false
+log-player-connections = true
+accepts-transfers = true
+[query]
+enabled = false
+port = 25577
+map = "Velocity"
+show-plugins = false

@@ -1,0 +1,12 @@
+spring:
+  velocity:
+    secret: ${OGCLOUD_VELOCITY_SECRET}
+  jpa:
+    hibernate:
+      ddl-auto: none
+  kafka:
+    bootstrap-servers: ${OGCLOUD_KAFKA_URL}
+  datasource:
+    url: ${OGCLOUD_DB_URL}
+    username: ${OGCLOUD_DB_USERNAME}
+    password: ${OGCLOUD_DB_PASSWORD}

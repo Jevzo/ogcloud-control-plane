@@ -1,0 +1,5 @@
+### Scale proxy group
+POST {{baseUrl}}/statefulset/proxy/scale?amount=0
+
+### Scale lobby group
+POST {{baseUrl}}/statefulset/lobby/scale?amount=0

@@ -1,0 +1,45 @@
+### Upload config files to "lobby" group
+POST {{baseUrl}}/upload/lobby/configs
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="files"; filename="ops.json"
+Content-Type: application/octet-stream
+
+< ./configs/server/ops.json
+--WebAppBoundary--
+
+### Upload maps zip to "lobby" group
+POST {{baseUrl}}/upload/lobby/maps
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="files"; filename="world.zip"
+Content-Type: application/octet-stream
+
+< ./configs/server/maps/world.zip
+--WebAppBoundary--
+
+### Upload plugins zip to "lobby" group
+POST {{baseUrl}}/upload/lobby/plugins
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="files"; filename="ogcloud-paper-connector-1.0.0-all.zip"
+Content-Type: application/octet-stream
+
+< ./configs/server/plugins/ogcloud-paper-connector-1.0.0-all.zip
+--WebAppBoundary--
+
+### Upload plugins zip to "proxy" group
+POST {{baseUrl}}/upload/proxy/plugins
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="files"; filename="ogcloud-velocity-connector-1.0.0-all.zip"
+Content-Type: application/octet-stream
+
+< ./configs/proxy/plugins/ogcloud-velocity-connector-1.0.0-all.zip
+--WebAppBoundary--
+
+
