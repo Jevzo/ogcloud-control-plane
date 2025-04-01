@@ -2,12 +2,12 @@ group = "de.ogwars"
 version = "1.0.0"
 
 plugins {
-    id("org.springframework.boot") version "3.3.2"
-    id("io.spring.dependency-management") version "1.1.6"
+    id("org.springframework.boot") version "3.4.4"
+    id("io.spring.dependency-management") version "1.1.7"
 
-    kotlin("plugin.jpa") version "1.9.24"
-    kotlin("jvm") version "1.9.24"
-    kotlin("plugin.spring") version "1.9.24"
+    kotlin("jvm") version "1.9.25"
+    kotlin("plugin.jpa") version "1.9.25"
+    kotlin("plugin.spring") version "1.9.25"
 }
 
 java {
@@ -23,35 +23,23 @@ repositories {
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.boot:spring-boot-starter-jersey")
-    //implementation("org.springframework.boot:spring-boot-starter-security")
     implementation("org.springframework.boot:spring-boot-starter-web")
-    //implementation("org.springframework.kafka:spring-kafka")
 
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
 
-    implementation("io.fabric8:kubernetes-client:6.13.1") {
+    implementation("io.fabric8:kubernetes-client:7.1.0") {
         exclude(group = "org.apache.commons", module = "commons-compress")
     }
-    implementation("org.apache.commons:commons-compress:1.26.2")
-    implementation("org.yaml:snakeyaml:2.2")
+    implementation("org.apache.commons:commons-compress:1.27.1")
+    implementation("org.yaml:snakeyaml:2.4")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.1")
 
     runtimeOnly("org.postgresql:postgresql")
-
-    testImplementation("org.springframework.boot:spring-boot-starter-test")
-    testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
-    testImplementation("org.springframework.kafka:spring-kafka-test")
-    //testImplementation("org.springframework.security:spring-security-test")
-    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
 kotlin {
     compilerOptions {
         freeCompilerArgs.addAll("-Xjsr305=strict")
     }
-}
-
-tasks.withType<Test> {
-    useJUnitPlatform()
 }
